@@ -18,7 +18,7 @@ app.use('/api/v1/post', postRoutes);
 app.use('/api/v1/dalle', dalleRoutes);
 
 app.get('/', (req, res) => {
-    res.send('Hello World');
+    res.send('Welcome to OpenAI World');
 })
 
 app.listen(PORT, (error) => {
