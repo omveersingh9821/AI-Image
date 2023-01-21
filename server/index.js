@@ -10,7 +10,7 @@ dotenv.config();
 
 const app = express();
 app.use(cors());
-const Port = 4500;
+const PORT = process.env.PORT || 4500;
 
 app.use(express.json({limit:'50mb'}));
 
@@ -21,11 +21,11 @@ app.get('/', (req, res) => {
     res.send('Hello World');
 })
 
-app.listen(Port, (error) => {
+app.listen(PORT, (error) => {
     if (error) {
         console.log('Error: ' + error);
     } else {
-        console.log('Server is running on port: ' + Port);
+        console.log('Server is running on port: ' + PORT);
     }
 })
 
